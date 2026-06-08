@@ -34,7 +34,7 @@ function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        Hy! I Am
+                        Hi! I Am
                     </motion.h2>
 
                     <motion.h2
