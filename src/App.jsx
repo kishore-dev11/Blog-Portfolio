@@ -14,7 +14,7 @@ function App() {
 
         <Routes>
           {/* Default Route */}
-          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/" element={<Home />} />
 
           {/* Pages */}
           <Route path="/home" element={<Home />} />
