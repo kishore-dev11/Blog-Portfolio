@@ -34,7 +34,7 @@ function Navbar() {
               to="/home"
               className="text-3xl font-bold text-orange-500"
             >
-              Personal
+              Personal Portfolio
             </Link>
           </motion.div>
 

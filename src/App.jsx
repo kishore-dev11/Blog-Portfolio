@@ -9,7 +9,7 @@ import About from "./components/About";
 function App() {
   return (
     <BrowserRouter>
-      <div className="px-10 bg-white border rounded-md">
+      <div className=" bg-white  rounded-md">
         <Navbar />
 
         <Routes>

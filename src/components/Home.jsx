@@ -20,16 +20,18 @@ function Home() {
     return (
         <div>
 
-            <div className='flex items-center justify-center'>
+            <div className="flex flex-col-reverse sm:flex-row items-center justify-center px-4 sm:px-10 md:px-20 py-10 gap-10">
 
+                {/* LEFT CONTENT */}
                 <motion.div
-                    className="w-full sm:w-1/2 flex-col justify-center"
+                    className="w-full sm:w-1/2 flex flex-col justify-center text-center sm:text-left"
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
+
                     <motion.h2
-                        className='text-3xl md:text-6xl font-bold pb-2'
+                        className="text-3xl sm:text-4xl md:text-6xl font-bold pb-2"
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
@@ -38,7 +40,7 @@ function Home() {
                     </motion.h2>
 
                     <motion.h2
-                        className='text-4xl md:text-7xl font-bold text-orange-400 py-2'
+                        className="text-4xl sm:text-5xl md:text-7xl font-bold text-orange-400 py-2"
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
@@ -46,28 +48,29 @@ function Home() {
                         Kishore
                     </motion.h2>
 
+                    {/* IMAGE (mobile only optional) */}
                     <motion.img
                         src={BlogProfileImage}
-                        className='w-60 block sm:hidden'
-                        alt="Blog Profile Image"
+                        className="w-40 sm:hidden mx-auto my-4"
+                        alt="Blog Profile"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.6 }}
                     />
 
                     <motion.p
-                        className='py-2'
+                        className="text-gray-600 py-3 text-sm sm:text-base md:text-lg"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8 }}
                     >
-                        I can create stunning website for your company, Do check my works.
-                        I won't disappoint you. Try me for 7 Days before you decide anything.
+                        I can create stunning websites for your company. Do check my works.
+                        I won't disappoint you. Try me for 7 days before you decide anything.
                     </motion.p>
 
                     <motion.button
-                        className='button-style mt-2ml-2 px-5 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition'
-                        whileHover={{ scale: 1.1 }}
+                        className="mt-4 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition w-fit mx-auto sm:mx-0"
+                        whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -75,22 +78,20 @@ function Home() {
                     >
                         Hire Me
                     </motion.button>
+
                 </motion.div>
 
+                {/* RIGHT IMAGE (desktop only) */}
                 <motion.div
-                    className='justify-center hidden sm:block'
-                    animate={{ y: [0, -20, 0] }}
-                    transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
+                    className="w-full sm:w-1/2 flex justify-center"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
                 >
-                    <motion.img
+                    <img
                         src={BlogProfileImage}
-                        className='w-60 md:w-96'
-                        alt="Blog Profile Image"
-                        whileHover={{ scale: 1.05 }}
+                        className="hidden sm:block w-72 md:w-96"
+                        alt="Profile"
                     />
                 </motion.div>
 
